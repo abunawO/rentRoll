@@ -8,4 +8,4 @@ unit,floor_plan,resident,move_in,move_out
 3,Suite,,,
 4,Suite,,,
 5,Suite,Teddy,,
-1,Studio,Abunaw Ose,2023/6/1,
+1,Studio,Abunaw Ose,2023/6/1,2023/12/15

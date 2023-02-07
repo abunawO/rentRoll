@@ -65,7 +65,7 @@ class RentRoll
       end
 
       #Count occupied units
-      if !move_in_date.nil? && (move_out_date.nil? || Date.parse(move_out_date) >= date)
+      if !move_in_date.nil? && (move_out_date.nil? || Date.parse(move_in_date) < date && Date.parse(move_out_date) > date)
         occupied_units += 1
       end
 
