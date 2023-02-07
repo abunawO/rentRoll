@@ -78,6 +78,7 @@ class RentRoll
     stats["vacant_units"] = vacant_units
     stats["occupied_units"] = occupied_units
     stats["leased_units"] = leased_units
+
     puts stats
   end
 
