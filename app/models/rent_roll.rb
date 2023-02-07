@@ -43,6 +43,7 @@ class RentRoll
       report_string << "#{row[0]}\t#{row[1]}\t#{row[2]}\t#{row[3]}\t#{row[4]}\t#{row[5]}\n"
     end
 
+    puts "Rent Roll Report"
     puts report_string
   end
 
@@ -65,6 +66,7 @@ class RentRoll
       end
 
       #Count occupied units
+      #2023/1/1
       if !move_in_date.nil? && (move_out_date.nil? || Date.parse(move_in_date) < date && Date.parse(move_out_date) > date)
         occupied_units += 1
       end
@@ -75,14 +77,11 @@ class RentRoll
       end
     end
 
-    stats["vacant_units"] = vacant_units
-    stats["occupied_units"] = occupied_units
-    stats["leased_units"] = leased_units
-
-    puts stats
+    puts "key Statistics"
+    puts ["vacant_units" => vacant_units, "occupied_units" => occupied_units, "leased_units" => leased_units]
   end
 
-  #Test in console
+  #Test
   #RentRoll.new.rent_roll_report(Date.new(2023/1/1))
   #RentRoll.new.key_statistics(Date.new(2023/1/1))
 end
